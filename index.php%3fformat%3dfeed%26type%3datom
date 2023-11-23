@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Ultimate Rivers: Nepal - Rafting the Sunkosi, Bhotekosi, Karnali, Trishuli, Tamur, Marshyangdi, Kali Gandaki and Himalayan Kayak Clinic...</title>
+	<subtitle type="text">Nepal's pioneer of river rafting, Ultimate Rivers offer rafting trips on all major rivers throughout Nepal.</subtitle>
+	<link rel="alternate" type="text/html" href="http://ultimaterivers.com.np"/>
+	<id>http://ultimaterivers.com.np/index.php</id>
+	<updated>2018-09-06T23:55:08+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://ultimaterivers.com.np/index.php?format=feed&amp;type=atom"/>
+	<entry>
+		<title>About Us</title>
+		<link rel="alternate" type="text/html" href="http://ultimaterivers.com.np/index.php/about-us"/>
+		<published>2012-05-17T06:19:23+00:00</published>
+		<updated>2012-05-17T06:19:23+00:00</updated>
+		<id>http://ultimaterivers.com.np/index.php/about-us</id>
+		<summary type="html">&lt;p&gt;Operating in Nepal for the last 12 years, Ultimate Rivers, as our name suggests, is the ultimate rafting and paddling company in Nepal when it comes to safety, value for money, quality, service and fun on Nepal’s wild and beautiful white water.&lt;/p&gt;
+&lt;p&gt;At Ultimate Rivers, we go beyond just providing you a rafting or kayaking holiday, we give to you an adventure packed full of moments you will never forget, an incredible journey on some of the best white water in the world, showcasing the best of Nepal’s rural landscapes and culture.&lt;/p&gt;
+&lt;p&gt;Beyond that we also focus on the environment and sustainable tourism, our river trips are ran with the upmost respect for our fragile environment. Not only that but we have a solid commitment to our local community as well. Near to our Bhote Koshi Resort, we played a big hand in building the Bansangu School and continue to help the students in ongoing studies, improvements and community based projects.&lt;/p&gt;
+</summary>
+		<content type="html">&lt;p&gt;Operating in Nepal for the last 12 years, Ultimate Rivers, as our name suggests, is the ultimate rafting and paddling company in Nepal when it comes to safety, value for money, quality, service and fun on Nepal’s wild and beautiful white water.&lt;/p&gt;
+&lt;p&gt;At Ultimate Rivers, we go beyond just providing you a rafting or kayaking holiday, we give to you an adventure packed full of moments you will never forget, an incredible journey on some of the best white water in the world, showcasing the best of Nepal’s rural landscapes and culture.&lt;/p&gt;
+&lt;p&gt;Beyond that we also focus on the environment and sustainable tourism, our river trips are ran with the upmost respect for our fragile environment. Not only that but we have a solid commitment to our local community as well. Near to our Bhote Koshi Resort, we played a big hand in building the Bansangu School and continue to help the students in ongoing studies, improvements and community based projects.&lt;/p&gt;
+</content>
+		<category term="Featured" />
+		<category term="About Us" />
+		<category term="Main" />
+	</entry>
+</feed>
