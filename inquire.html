@@ -50,18 +50,46 @@
       <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon"/>
       <style>.w-webflow-badge { position: fixed !important; display: None !important; visibility: hidden !important; } </style>
       <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            const referrer = document.referrer.toLowerCase();
-            const select = document.getElementById('trip-select');
+      window.addEventListener('DOMContentLoaded', function () {
+    const referrer = document.referrer.toLowerCase();
+    const tripSelect = document.getElementById('trip-select');
+    const dateSelect = document.getElementById('departure-date');
 
-            if (!select) return; // Safety check
+    const tripDates = {
+        bhotekoshi: ['2025-08-01', '2025-08-05', '2025-08-10'],
+        seti: ['2025-08-03', '2025-08-07', '2025-08-12']
+    };
 
-            if (referrer.includes('ultimaterivers.com.np')) {
-                select.value = 'Third';
-            } else {
-                select.value = 'Second';
-            }
-        });
+    // Set trip based on referrer
+    if (tripSelect) {
+        if (referrer.includes('ultimaterivers.com.np')) {
+            tripSelect.value = 'bhotekoshi';
+        } else {
+            tripSelect.value = 'seti';
+        }
+        updateDateOptions(tripSelect.value);
+    }
+
+    tripSelect.addEventListener('change', function () {
+        updateDateOptions(this.value);
+    });
+
+    function updateDateOptions(tripKey) {
+        // Clear previous options
+        dateSelect.innerHTML = '<option value="">-- Select a date --</option>';
+
+        // Populate new options
+        if (tripDates[tripKey]) {
+            tripDates[tripKey].forEach(function (date) {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = date;
+                dateSelect.appendChild(option);
+            });
+        }
+    }
+});
+
 
      </script>
 
