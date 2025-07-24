@@ -56,16 +56,16 @@
     const dateSelect = document.getElementById('departure-date');
 
     const tripDates = {
-        bhotekoshi: ['2025-08-01', '2025-08-05', '2025-08-10'],
-        seti: ['2025-08-03', '2025-08-07', '2025-08-12']
+        second: ['2025-08-01', '2025-08-05', '2025-08-10'],
+        third: ['2025-08-03', '2025-08-07', '2025-08-12']
     };
 
     // Set trip based on referrer
     if (tripSelect) {
         if (referrer.includes('ultimaterivers.com.np')) {
-            tripSelect.value = 'bhotekoshi';
+            tripSelect.value = 'second';
         } else {
-            tripSelect.value = 'seti';
+            tripSelect.value = 'third';
         }
         updateDateOptions(tripSelect.value);
     }
