@@ -66,22 +66,28 @@
       </script>
       
       <script>
-  	document.addEventListener('DOMContentLoaded', () => {
-	const params = new URLSearchParams(window.location.search);
-	
-	// Get the trip-select value from the URL
-	const trip = params.get('trip-select');
-	const tripSelectField = document.getElementById('trip-select');
-	
-	if (trip && tripSelectField) {
-	// Check if the option exists
-	      const isValidOption = Array.from(tripSelectField.options).some(opt => opt.value === trip);
-		if (isValidOption) {
-	        tripSelectField.value = trip;
-	      }
-	    }
-	  });
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+
+    // trip-select (select dropdown)
+    const trip = params.get('trip-select');
+    const tripSelect = document.getElementById('trip-select');
+    if (trip && tripSelect) {
+      const isValidTrip = Array.from(tripSelect.options).some(opt => opt.value === trip);
+      if (isValidTrip) {
+        tripSelect.value = trip;
+      }
+    }
+
+    // departure-date (date input)
+    const departureDate = params.get('departure-date');
+    const dateField = document.getElementById('departure-date');
+    if (departureDate && dateField) {
+      dateField.value = departureDate;
+    }
+  });
 </script>
+
 
 
       </script>
@@ -933,7 +939,7 @@
                   <div class="participant-no"><label class="field-label-15" for="participants">Participants *</label><input class="text-field-9 w-input" data-name="participants" id="participants" maxlength="256" name="participants" placeholder="" required="" type="number"/></div>
                </div>
                <label class="field-label-17" for="">Departure Date from the listing *</label>
-               <div><input class="text-field-12 w-input" data-name="departure-date" id="departure-date" maxlength="256" name="departure-date" placeholder="" required="" ty="" type="text"/></div>
+               <div><input class="text-field-12 w-input" data-name="departure-date" id="departure-date" maxlength="256" name="departure-date" placeholder="" required="" ty="" type="date"/></div>
                <div class="comments-questions"><label class="field-label-6" for="comment">Your Message</label><textarea class="textarea-2 w-input" data-name="comment" id="comment" maxlength="5000" name="comment" placeholder="Your Message here ...."></textarea></div>
                <input class="submit-button-2 w-button" data-wait="Please wait..." type="submit" value="Submit"/>
             </form>
