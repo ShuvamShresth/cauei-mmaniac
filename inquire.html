@@ -66,42 +66,24 @@
       </script>
       
       <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            const referrer = document.referrer.toLowerCase();
-            const select = document.getElementById('trip-select');
+       const params = new URLSearchParams(window.location.search);
 
-            if (!select) return; // Safety check
-
-        window.addEventListener('DOMContentLoaded', function () {
-            const referrer = document.referrer.toLowerCase();
-            const select = document.getElementById('trip-select');
-
-            if (!select) return;
-
-            if (referrer.includes('ultimaterivers.com.np/rafting/bhotekoshi')) {
-                select.value = 'bhotekoshi';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/trishuli')) {
-                select.value = 'trishuli';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/seti')) {
-                select.value = 'seti';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/tamur')) {
-                select.value = 'tamur';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/karnali')) {
-                select.value = 'karnali';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/sunkoshi')) {
-                select.value = 'sunkoshi';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/arun')) {
-                select.value = 'arun';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/kaligandaki')) {
-                select.value = 'kaligandaki';
-            } else if (referrer.includes('ultimaterivers.com.np/rafting/marshyangdi')) {
-                select.value = 'marshyangdi';
-            }
-        });
-
-
-        });
-
+    params.forEach((value, key) => {
+      const field = document.getElementById(key);
+      if (field) {
+        // Check if field is a select element
+        if (field.tagName.toLowerCase() === 'select') {
+          // Set the value if it matches an option
+          const optionExists = Array.from(field.options).some(opt => opt.value === value);
+          if (optionExists) {
+            field.value = value;
+          }
+        } else {
+          // For input fields
+          field.value = value;
+        }
+      }
+    });
       </script>
    </head>
    <body>
