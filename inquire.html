@@ -66,24 +66,24 @@
       </script>
       
       <script>
-       const params = new URLSearchParams(window.location.search);
+  	document.addEventListener('DOMContentLoaded', () => {
+	const params = new URLSearchParams(window.location.search);
+	
+	// Get the trip-select value from the URL
+	const trip = params.get('trip-select');
+	const tripSelectField = document.getElementById('trip-select');
+	
+	if (trip && tripSelectField) {
+	// Check if the option exists
+	      const isValidOption = Array.from(tripSelectField.options).some(opt => opt.value === trip);
+		if (isValidOption) {
+	        tripSelectField.value = trip;
+	      }
+	    }
+	  });
+</script>
 
-    params.forEach((value, key) => {
-      const field = document.getElementById(key);
-      if (field) {
-        // Check if field is a select element
-        if (field.tagName.toLowerCase() === 'select') {
-          // Set the value if it matches an option
-          const optionExists = Array.from(field.options).some(opt => opt.value === value);
-          if (optionExists) {
-            field.value = value;
-          }
-        } else {
-          // For input fields
-          field.value = value;
-        }
-      }
-    });
+
       </script>
    </head>
    <body>
