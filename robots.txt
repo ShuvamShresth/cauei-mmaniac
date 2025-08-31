@@ -1,3 +1,9 @@
 User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
+
+
+Disallow: /images/sunkoshi_1.jpg
+Disallow: /images/sunkoshi_3.jpg
+Disallow: /images/sunkoshi_4.jpg
+Disallow: /images/sunkoshi_5.jpg
