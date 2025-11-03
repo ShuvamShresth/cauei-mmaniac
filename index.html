@@ -66,6 +66,7 @@
                 visibility: hidden !important;
             }
         </style>
+        
         <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -153,6 +154,31 @@
     }
   ]
 }
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  // detect mobile viewport
+  if (window.innerWidth < 768) {
+
+    // 1. Remove Webflow's automatic video loader
+    document.querySelectorAll('[data-video-urls]').forEach(function(el) {
+      el.removeAttribute('data-video-urls');
+    });
+
+    // 2. Remove <source> elements so browser cannot fetch video
+    document.querySelectorAll('.w-background-video video source').forEach(function(source) {
+      source.remove();
+    });
+
+    // 3. Pause and clear the <video> element (backup)
+    document.querySelectorAll('.w-background-video video').forEach(function(video) {
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+    });
+  }
+});
 </script>
     </head>
     <body class="body" fo="">
